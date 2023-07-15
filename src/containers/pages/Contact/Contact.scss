@@ -1,0 +1,79 @@
+.container-cards-contact {
+  width: 95%;
+  margin: auto;
+  h1 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 1.2em;
+  }
+
+  .card-contact-container {
+    display: flex;
+    flex-direction: column;
+
+    .card-contact {
+      margin-bottom: 20px;
+    }
+    // .card-whatsapp img {
+    //   filter: invert(48%) sepia(98%) saturate(352%) hue-rotate(47deg)
+    //     brightness(92%) contrast(94%);
+    // }
+
+    // .card-phone img {
+    //   filter: invert(12%) sepia(97%) saturate(3449%) hue-rotate(230deg)
+    //     brightness(102%) contrast(157%);
+    // }
+  }
+  a {
+    display: inline-block;
+    background: linear-gradient(45deg, #83b82e, #5f9e1e, #3a6b0f);
+    background-size: 200% 200%;
+    color: white;
+    margin-top: 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: bold;
+    align-self: center;
+    text-align: center;
+    animation: gradientTransition 5s ease infinite;
+    transform: scale(1);
+    transition: transform 0.2s ease;
+  }
+
+  @keyframes gradientTransition {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  .container-contact-home a:hover {
+    transform: scale(1.1);
+  }
+  @media (max-width: 768px) {
+    .container-contact-home a {
+      align-self: flex-end;
+      text-align: right;
+    }
+  }
+  @media screen and (min-width: 695px) {
+    .card-contact-container {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .card-contact {
+        flex-basis: calc(33.333% - 20px);
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 695px) {
+    width: 85%;
+  }
+}

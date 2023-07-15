@@ -1,0 +1,38 @@
+.container-company {
+  width: 95%;
+  margin: 3vh auto;
+  h2 {
+    margin-bottom: 2rem;
+  }
+  .content {
+    display: flex;
+
+    .text-container {
+      flex: 1;
+      margin-left: 3rem;
+      text-align: start;
+    }
+  }
+}
+
+.card-company {
+  img,
+  svg {
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-company {
+    .content {
+      flex-direction: column;
+      .image-container {
+        margin-bottom: 1.5rem;
+      }
+      .text-container {
+        margin-left: 0rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.swiper {
+  margin: 0;
+}
+.swiperH {
+  width: 32vw;
+  max-width: 350px;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(218, 67%, 99%);
+  border-radius: 2px;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.32);
+  img {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .swiperH {
+    width: 80vw;
+    max-width: 95%;
+    margin: 0 auto;
+  }
+}

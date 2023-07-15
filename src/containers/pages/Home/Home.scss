@@ -1,0 +1,169 @@
+$font-family: "Nunito Sans", sans-serif;
+$font-weight-bold: 600;
+
+h1,
+h2,
+p {
+  font-family: $font-family;
+}
+
+h1 {
+  font-weight: $font-weight-bold;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 1.4em;
+  span {
+    font-weight: $font-weight-bold;
+  }
+}
+body {
+  background-color: #f8f8ff;
+}
+.container-cards-home {
+  width: 85%;
+  margin: auto;
+  margin-top: 95vh;
+  h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 1.2em;
+  }
+
+  .card-about-container {
+    display: flex;
+    flex-direction: column;
+
+    .card-about {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (min-width: 790px) {
+    .card-about-container {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .card-about {
+        flex-basis: calc(33.333% - 20px);
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.container-contact-home {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("/../public/img/imgFixed/mail2.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 5em;
+}
+
+.container-contact-home h2 {
+  font-size: 24px;
+  color: black;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+  align-self: flex-start;
+}
+
+.container-contact-home h2::after {
+  content: "";
+  position: absolute;
+  top: -1%;
+  left: -10px;
+  right: -10px;
+  bottom: -1%;
+  background-color: #fff;
+  opacity: 0.75;
+  z-index: -1;
+}
+
+@media (max-width: 500px) {
+  .container-contact-home h2::after {
+    background-color: #ffffff10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+.container-contact-home,
+.container-jobs-home {
+  a {
+    display: inline-block;
+    background: linear-gradient(45deg, #83b82e, #5f9e1e, #3a6b0f);
+    background-size: 200% 200%;
+    color: white;
+    margin: 15px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: bold;
+    align-self: center;
+    text-align: center;
+    animation: gradientTransition 5s ease infinite;
+    transform: scale(1);
+    transition: transform 0.2s ease;
+    &:nth-child(2) {
+      background: linear-gradient(45deg, #e69500, #cc7a00, #a65c00);
+    }
+  }
+}
+.container-jobs-home {
+  width: 85%;
+  margin: 5vh auto;
+  h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 0.8em;
+  }
+  .container-jobs-home-btns {
+    display: flex;
+    margin: 0 auto;
+    max-width: 85%;
+    justify-content: space-evenly;
+  }
+}
+@keyframes gradientTransition {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.container-contact-home a:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .container-contact-home a {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 690px) {
+  .container-cards-home {
+    margin-top: 80vh;
+  }
+  .container-jobs-home {
+    .container-jobs-home-btns {
+      max-width: 100%;
+      a {
+        padding: 10px 15px;
+      }
+    }
+  }
+}

@@ -7,23 +7,23 @@ function NavFooter() {
   return (
     <footer className="nav-footer">
       <nav className="nav">
-        <NavLink to="/" className="nav-link" activeClassName="active">
+        <NavLink to="/" className="nav-link" activeclassname="active">
           Inicio
         </NavLink>
-        <NavLink to="/servicios" className="nav-link" activeClassName="active">
+        <NavLink to="/servicios" className="nav-link" activeclassname="active">
           Servicios
         </NavLink>
-        <NavLink to="/trabajos" className="nav-link" activeClassName="active">
+        <NavLink to="/trabajos" className="nav-link" activeclassname="active">
           Trabajos
         </NavLink>
-        <NavLink to="/nosotros" className="nav-link" activeClassName="active">
+        <NavLink to="/nosotros" className="nav-link" activeclassname="active">
           Nosotros
         </NavLink>
-        <NavLink to="/contacto" className="nav-link" activeClassName="active">
+        <NavLink to="/contacto" className="nav-link" activeclassname="active">
           Contacto
         </NavLink>
       </nav>
-      <p className="text-muted">© {currentYear} Company, Inc</p>
+      <p className="text-muted">© {currentYear} Aphlix</p>
     </footer>
   );
 }

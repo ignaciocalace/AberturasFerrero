@@ -1,10 +1,14 @@
+@import "src/styles/card/card.scss";
 @import "src/components/NavBar/NavBar.scss";
 @import "src/containers/pages/Home/Home.scss";
+@import "src/components/CardJob/CardJob.scss";
+@import "src/components/Swipers/SwiperH.scss";
+@import "src/containers/pages/Jobs/Jobs.scss";
+@import "src/components/Loading/Loading.scss";
 @import "src/components/CardAbout/CardAbout.scss";
 @import "src/components/NavFooter/NavFooter.scss";
-@import "src/components/CardContact/CardContact.scss";
 @import "src/containers/pages/Contact/Contact.scss";
 @import "src/containers/pages/Company/Company.scss";
 @import "src/components/HomeImgCarr/HomeImgCarr.scss";
-@import "src/components/Swipers/SwiperH.scss";
-@import "src/styles/card/card.scss";
+@import "src/components/CardContact/CardContact.scss";
+@import "src/containers/pages/JobDetail/JobDetail.scss";

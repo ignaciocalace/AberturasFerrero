@@ -1,0 +1,90 @@
+.container-job-detail {
+  width: 95%;
+  margin: auto;
+  h2 {
+    font-size: 34px;
+    text-align: center;
+    margin: 20px 0;
+  }
+  .container-swipers {
+    width: 100%;
+    margin-bottom: 40px;
+    .swiperJobs-img,
+    .swiperJobs-thumbs {
+      min-width: 300px;
+      background-color: hsl(218, 67%, 99%);
+      border-radius: 2px;
+
+      img {
+        max-width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+      }
+    }
+    .swiperJobs-img {
+      width: 85%;
+      max-width: 1000px;
+      max-height: 80vh;
+      box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.1),
+        2px 8px 12px rgba(0, 0, 0, 0.32);
+      // .swiper-button-prev::after,
+      // .swiper-button-next::after {
+      //   font-size: 4vw;
+      //   margin: auto;
+      // }
+    }
+    .swiperJobs-thumbs {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: calc(0.8 * 93%);
+      max-width: 780px;
+      .swiper-slide-thumb-active {
+        border: 5px solid #e69500;
+      }
+    }
+  }
+  .container-card-text {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 2px;
+    max-width: 80%;
+  }
+  a {
+    display: inline-block;
+    background: linear-gradient(45deg, #83b82e, #5f9e1e, #3a6b0f);
+    background-size: 200% 200%;
+    color: white;
+    margin: 15px 0;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: bold;
+    align-self: center;
+    text-align: center;
+    animation: gradientTransition 5s ease infinite;
+    transform: scale(1);
+    transition: transform 0.2s ease;
+    &:nth-child(2) {
+      background: linear-gradient(45deg, #e69500, #cc7a00, #a65c00);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container-job-detail {
+    .container-swipers {
+      margin-bottom: 0px;
+      .swiperJobs-img {
+        width: 95%;
+      }
+      .swiperJobs-thumbs {
+        margin-bottom: 20px;
+        width: calc(0.9 * 100%);
+      }
+    }
+  }
+}

@@ -1,11 +1,11 @@
 import React from "react";
 import NavBar from "../../components/NavBar/NavBar.jsx";
 
-const Header = () => {
+const Header = ({ onShowChange }) => {
   return (
-    <div>
-      <NavBar />
-    </div>
+    <header>
+      <NavBar onShowChange={onShowChange} />
+    </header>
   );
 };
 

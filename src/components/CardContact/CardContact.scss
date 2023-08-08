@@ -1,20 +1,15 @@
 .card-contact {
-  background-color: hsl(218, 67%, 99%);
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.06);
-
   img,
   svg {
-    width: 28px;
-    height: 28px;
-    margin-right: 10px;
+    width: 60px;
+    aspect-ratio: 1;
+    margin: 10px auto;
     transition: transform 0.3s ease-in-out;
-    &:hover {
-      transform: scale(1.05);
-    }
+  }
+
+  &:hover img,
+  &:hover svg {
+    transform: scale(1.1);
   }
 
   h3 {

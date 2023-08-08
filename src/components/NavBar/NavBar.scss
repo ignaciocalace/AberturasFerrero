@@ -37,6 +37,9 @@
       &:hover {
         color: white;
       }
+      @media (max-width: 768px) {
+        font-size: 34px;
+      }
     }
   }
   .navbar-bg {
@@ -65,7 +68,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
     .nav-link {
       color: #fff;
       margin-left: 20px;
@@ -75,11 +77,13 @@
       &:hover {
         color: #71b100;
         text-decoration: none;
+        text-shadow: 2px 2px 5px rgba(43, 42, 42, 0.7);
       }
 
       &.active {
-        color: #588b00;
+        color: #71b100;
         font-weight: bold;
+        text-shadow: 2px 2px 5px rgba(43, 42, 42, 0.7);
       }
 
       &::before {
@@ -105,7 +109,10 @@
     border: white;
     box-shadow: none;
   }
-
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
   .navbar-toggler-icon {
     background-image: none !important;
     background-color: white;
@@ -173,14 +180,44 @@
   flex-grow: 0;
 }
 
+@media (max-width: 991px) {
+  .nav-bar {
+    .navbar-content {
+      .menu {
+        .nav-link {
+          align-self: flex-end;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
 @media (max-width: 690px) {
   .nav-bar {
     .navbar-bg {
+      background-size: auto 90vh;
+      background-repeat: no-repeat;
+      background-position: top center;
       height: 90vh;
       h1 {
         bottom: 5%;
         left: 40%;
       }
+    }
+    .navbar-content {
+      .menu {
+        .nav-link {
+          align-self: flex-end;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .nav-bar {
+    .navbar-content {
+      flex-direction: column;
     }
   }
 }

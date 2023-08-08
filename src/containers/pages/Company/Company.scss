@@ -1,8 +1,11 @@
 .container-company {
   width: 95%;
+  min-height: 70vh;
   margin: 3vh auto;
   h2 {
-    margin-bottom: 2rem;
+    font-size: 34px;
+    text-align: center;
+    margin: 20px 0;
   }
   .content {
     display: flex;
@@ -11,15 +14,22 @@
       flex: 1;
       margin-left: 3rem;
       text-align: start;
+      p {
+        span {
+          font-weight: bold;
+        }
+      }
     }
-  }
-}
-
-.card-company {
-  img,
-  svg {
-    width: 100%;
-    max-width: 380px;
+    .image-container {
+      flex: auto;
+      width: 1%;
+      min-height: 80vh;
+      background-size: cover;
+      background-position: center;
+      background-image: url("/../public/img/imgFixed/jobsHome/cerramientos/cerramientos12.jpg");
+      align-self: center;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -29,6 +39,9 @@
       flex-direction: column;
       .image-container {
         margin-bottom: 1.5rem;
+        width: 100%;
+        min-height: 220px;
+        background-image: url("/../public/img/imgFixed/jobsHome/ventanas/ventana2.jpg");
       }
       .text-container {
         margin-left: 0rem;

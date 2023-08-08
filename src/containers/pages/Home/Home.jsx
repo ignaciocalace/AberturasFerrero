@@ -2,11 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CardAbout from "../../../components/CardAbout/CardAbout.jsx";
 import HomeImgCarr from "../../../components/HomeImgCarr/HomeImgCarr.jsx";
+import { Helmet } from "react-helmet";
 
-function Home() {
+function Home({ show }) {
   return (
     <>
-      <div className="container-cards-home">
+      <Helmet>
+        <title>Aberturas Ferrero</title>
+      </Helmet>
+      <div
+        className={`container-cards-home ${show ? "adjust-about-cards" : ""}`}
+      >
         <h2>Más sobre nosotros</h2>
         <div className="card-about-container">
           <CardAbout

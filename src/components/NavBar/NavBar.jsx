@@ -1,10 +1,22 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink, useLocation } from "react-router-dom";
 
-function NavBar() {
+function NavBar({ onShowChange }) {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+
+  const [isShow, setIsShow] = useState(false);
+
+  useEffect(() => {
+    onShowChange(isShow);
+  }, [isShow, onShowChange]);
+
+  const handleClick = () => {
+    setIsShow(!isShow);
+  };
 
   return (
     <Navbar
@@ -24,7 +36,7 @@ function NavBar() {
             </h2>
           </Navbar.Brand>
         </NavLink>
-        <Navbar.Toggle aria-controls="navbar-nav" />
+        <Navbar.Toggle aria-controls="navbar-nav" onClick={handleClick} />{" "}
         <Navbar.Collapse id="navbar-nav">
           <Nav className="menu">
             <NavLink to="/trabajos" className="nav-link">

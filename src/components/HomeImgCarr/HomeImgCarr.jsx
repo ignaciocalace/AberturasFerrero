@@ -2,27 +2,43 @@ import React from "react";
 import SwiperH from "../Swipers/SwiperH.jsx";
 
 function HomeImgCarr() {
-  const imagePaths1 = [
-    "/img/imgJobs/1/DSC_8224.jpg",
-    "/img/imgJobs/2/DSC_8229.jpg",
-  ];
+  const shuffleArray = (array) => array.sort(() => Math.random() - 0.5);
+
+  const imagePathsVentanas = shuffleArray(
+    Array.from(
+      { length: 5 },
+      (_, index) => `/img/imgFixed/jobsHome/ventanas/ventana${index + 1}.jpg`
+    )
+  );
+  const imagePathsCerramientos = shuffleArray(
+    Array.from(
+      { length: 13 },
+      (_, index) =>
+        `/img/imgFixed/jobsHome/cerramientos/cerramientos${index + 1}.jpg`
+    )
+  );
+  const imagePathsHerreria = shuffleArray(
+    Array.from(
+      { length: 6 },
+      (_, index) => `/img/imgFixed/jobsHome/herreria/herreria${index + 1}.jpg`
+    )
+  );
+
   return (
-    <>
-      <div className="container-jobs-homeimgcarr">
-        <div className="container-jobs-presentation">
-          <SwiperH imagePaths={imagePaths1} />
-          <h3>Ventanas</h3>
-        </div>
-        <div className="container-jobs-presentation">
-          <SwiperH imagePaths={imagePaths1} />
-          <h3>Cerramientos</h3>
-        </div>
-        <div className="container-jobs-presentation">
-          <SwiperH imagePaths={imagePaths1} />
-          <h3>Herrería</h3>
-        </div>
+    <div className="container-jobs-homeimgcarr">
+      <div className="container-jobs-presentation">
+        <SwiperH imagePaths={imagePathsVentanas} />
+        <h3>Ventanas</h3>
       </div>
-    </>
+      <div className="container-jobs-presentation">
+        <SwiperH imagePaths={imagePathsCerramientos} />
+        <h3>Cerramientos</h3>
+      </div>
+      <div className="container-jobs-presentation">
+        <SwiperH imagePaths={imagePathsHerreria} />
+        <h3>Herrería</h3>
+      </div>
+    </div>
   );
 }
 

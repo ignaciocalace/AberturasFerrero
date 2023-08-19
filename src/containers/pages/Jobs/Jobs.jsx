@@ -4,6 +4,7 @@ import db from "../../../config/configFirestore.js";
 import { collection, getDocs } from "firebase/firestore/lite";
 import Loading from "../../../components/Loading/Loading.jsx";
 import CardJobs from "../../../components/CardJob/CardJob.jsx";
+import ErrorMsg from "../../../components/ErrorMsg/ErrorMsg.jsx";
 
 const Jobs = () => {
   const [jobs, setJobs] = useState([]);
@@ -31,7 +32,7 @@ const Jobs = () => {
   }
 
   if (error) {
-    return <div>Servicio en Mantenimiento</div>;
+    return <ErrorMsg />;
   }
 
   return (
@@ -42,17 +43,19 @@ const Jobs = () => {
       <div className="container-jobs">
         <h2>Nuestros trabajos</h2>
         <div className="grid-jobs">
-          {jobs.map((job, index) => (
-            <CardJobs
-              key={index}
-              title={job.title}
-              type={
-                job.type === "Herrería" ? job.type : `Aluminio - ${job.type}`
-              }
-              image={`./img/imgJobs/${job.images}/img1.jpg`}
-              link={job.images}
-            />
-          ))}
+          {jobs
+            .filter((job) => job.title)
+            .map((job, index) => (
+              <CardJobs
+                key={index}
+                title={job.title}
+                type={
+                  job.type === "Herrería" ? job.type : `Aluminio - ${job.type}`
+                }
+                image={`./img/imgJobs/${job.images}/img1.jpg`}
+                link={job.images}
+              />
+            ))}
         </div>
       </div>
     </>

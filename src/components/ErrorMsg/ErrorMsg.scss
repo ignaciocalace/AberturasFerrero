@@ -1,0 +1,14 @@
+.error-msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 80vh;
+  max-width: 80%;
+  margin: 0 auto;
+  h4 {
+    font-size: 3.5vh;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}

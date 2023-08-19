@@ -5,3 +5,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
 RewriteRule . /index.html [L]
+
+<filesMatch ".(js|css|html|jpg|jpeg|png|svg)$">
+    Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+</filesMatch>

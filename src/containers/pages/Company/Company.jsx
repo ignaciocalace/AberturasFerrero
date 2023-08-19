@@ -19,7 +19,7 @@ const Company = () => {
               <p>
                 Con casi tres décadas de experiencia en el sector, nuestra
                 empresa se dedica a ofrecer{" "}
-                <span>servicios de la más alta calidad.</span> Nos guían
+                <strong>servicios de la más alta calidad.</strong> Nos guían
                 nuestros principios fundamentales de honestidad, integridad y
                 excelencia. Nos esforzamos en poner siempre las necesidades de
                 nuestros clientes al frente, trabajando constantemente para
@@ -29,17 +29,20 @@ const Company = () => {
                 En nuestro equipo, creemos en la innovación continua y
                 trabajamos incansablemente para superar las expectativas de
                 nuestros clientes. Durante años, hemos construido una reputación
-                sólida fundamentada en la integridad y el compromiso. Nuestro
-                objetivo es mantenernos como un socio confiable para nuestros
-                clientes, proporcionando soluciones personalizadas que
-                satisfacen sus necesidades y les ayudan a alcanzar sus
-                objetivos.
+                sólida fundamentada en la integridad y el compromiso.
+                <strong>
+                  {" "}
+                  Nuestro objetivo es mantenernos como un socio confiable para
+                  nuestros clientes,
+                </strong>{" "}
+                brindando soluciones personalizadas que satisfacen sus
+                necesidades y les ayudan a alcanzar sus objetivos.
               </p>
               <p>
                 Si busca una empresa comprometida con la calidad de sus
                 servicios y con una excepcional atención al cliente, no busque
                 más.
-                <span> Somos el equipo que está buscando.</span>
+                <strong> Somos el equipo que está buscando.</strong>
               </p>
             </div>
           </div>

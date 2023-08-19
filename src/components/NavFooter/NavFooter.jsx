@@ -23,7 +23,7 @@ function NavFooter() {
           Contacto
         </NavLink>
       </nav>
-      <p className="text-muted">© {currentYear} Aphlix</p>
+      <p className="text-muted">© {currentYear} Created by Ignacio Calace</p>
     </footer>
   );
 }

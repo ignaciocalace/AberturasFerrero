@@ -1,10 +1,6 @@
 .nav-bar {
   background: #333333;
-  background: linear-gradient(
-    to top,
-    rgba(51, 51, 51, 1) 0%,
-    rgba(31, 31, 31, 1) 100%
-  );
+  background: linear-gradient(to top, #333333 0%, #1f1f1f 100%);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/../public/img/imgFixed/portada.jpg");
   background-size: cover;
@@ -34,6 +30,8 @@
     h2 {
       margin: auto 0;
       color: white;
+      white-space: normal;
+
       &:hover {
         color: white;
       }
@@ -62,6 +60,7 @@
       left: 32%;
       transform: translate(-50%, -50%);
       z-index: 1;
+      white-space: normal;
     }
   }
   .menu {
@@ -204,20 +203,17 @@
         left: 40%;
       }
     }
-    .navbar-content {
-      .menu {
-        .nav-link {
-          align-self: flex-end;
-          margin-left: 0;
-        }
-      }
-    }
   }
 }
 @media (max-width: 500px) {
   .nav-bar {
     .navbar-content {
-      flex-direction: column;
+      justify-content: center !important;
+      .menu {
+        .nav-link {
+          align-self: center;
+        }
+      }
     }
   }
 }

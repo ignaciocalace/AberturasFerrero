@@ -1,5 +1,6 @@
 .container-company {
   width: 95%;
+  max-width: 1200px;
   min-height: 70vh;
   margin: 3vh auto;
   h2 {
@@ -14,16 +15,11 @@
       flex: 1;
       margin-left: 3rem;
       text-align: start;
-      p {
-        span {
-          font-weight: bold;
-        }
-      }
     }
     .image-container {
       flex: auto;
-      width: 1%;
-      min-height: 80vh;
+      max-width: 400px;
+      min-height: 60vh;
       background-size: cover;
       background-position: center;
       background-image: url("/../public/img/imgFixed/jobsHome/cerramientos/cerramientos12.jpg");

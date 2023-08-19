@@ -1,6 +1,5 @@
 import "./index.scss";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./containers/Header/Header.jsx";
 import Home from "./containers/pages/Home/Home.jsx";
@@ -18,6 +17,7 @@ function App() {
   const handleShowChange = (show) => {
     setShow(show);
   };
+
   return (
     <>
       <BrowserRouter>

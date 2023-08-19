@@ -3,16 +3,17 @@ import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import db from "../../../config/configFirestore.js";
 import { doc, getDoc } from "firebase/firestore/lite";
+import Loading from "../../../components/Loading/Loading.jsx";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ErrorMsg from "../../../components/ErrorMsg/ErrorMsg.jsx";
 import { Autoplay, FreeMode, Navigation, Thumbs } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/thumbs";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
-import Loading from "../../../components/Loading/Loading.jsx";
 
 const JobDetail = () => {
   const { jobId } = useParams();
@@ -47,15 +48,11 @@ const JobDetail = () => {
   }, [jobId]);
 
   if (loading) {
-    return (
-      <div>
-        <Loading />
-      </div>
-    );
+    return <Loading />;
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <ErrorMsg />;
   }
 
   const renderSwiperSlides = () => {

@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar.jsx";
 
-const Header = ({ onShowChange }) => {
+const Header = (props) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <header>
-      <NavBar onShowChange={onShowChange} />
+      <NavBar onShowChange={props.onShowChange} />
     </header>
   );
 };

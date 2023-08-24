@@ -7,7 +7,11 @@ const CardExpandable = ({ image, title, text, info }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="card-def card-job">
+    <div
+      className="card-def card-job"
+      data-aos="fade-up"
+      data-aos-duration="600"
+    >
       <img src={image} alt={title} loading="lazy" />
       <h3>{title}</h3>
       <p>{text}</p>

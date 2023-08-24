@@ -4,15 +4,13 @@ import CardAbout from "../../../components/CardAbout/CardAbout.jsx";
 import HomeImgCarr from "../../../components/HomeImgCarr/HomeImgCarr.jsx";
 import { Helmet } from "react-helmet";
 
-function Home({ show }) {
+function Home() {
   return (
     <>
       <Helmet>
         <title>Aberturas Ferrero</title>
       </Helmet>
-      <div
-        className={`container-cards-home ${show ? "adjust-about-cards" : ""}`}
-      >
+      <div className="container-cards-home">
         <h2>Más sobre nosotros</h2>
         <div className="card-about-container">
           <CardAbout
@@ -32,7 +30,6 @@ function Home({ show }) {
           />
         </div>
       </div>
-
       <div className="container-jobs-home">
         <h2>Conocé lo que hacemos</h2>
         <HomeImgCarr />

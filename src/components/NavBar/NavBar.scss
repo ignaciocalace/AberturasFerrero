@@ -1,4 +1,4 @@
-.nav-bar {
+.nav-bar-main {
   background: #333333;
   background: linear-gradient(to top, #333333 0%, #1f1f1f 100%);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -7,6 +7,7 @@
   background-position: top;
   color: #ffffff;
   padding: 4vh;
+  align-items: flex-start !important;
   .navbar-content {
     display: flex;
     justify-content: space-between;
@@ -40,29 +41,7 @@
       }
     }
   }
-  .navbar-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("/../public/img/imgFixed/portada.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
-    h1 {
-      max-width: 12em;
-      position: absolute;
-      bottom: 5%;
-      left: 32%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-      white-space: normal;
-    }
-  }
+
   .menu {
     display: flex;
     align-items: center;
@@ -167,12 +146,25 @@
     border-color: rgba(255, 255, 255, 0.1);
   }
 }
+
 .nav-bar-home {
-  background: linear-gradient(
-    to top,
-    rgba(51, 51, 51, 0) 0%,
-    rgba(31, 31, 31, 0.85) 98%
-  );
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/../public/img/imgFixed/portada.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin-bottom: 5vh;
+  h1 {
+    max-width: 12em;
+    position: absolute;
+    bottom: 5%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    white-space: normal;
+  }
 }
 
 #navbar-nav {
@@ -180,7 +172,7 @@
 }
 
 @media (max-width: 991px) {
-  .nav-bar {
+  .nav-bar-main {
     .navbar-content {
       .menu {
         .nav-link {
@@ -191,22 +183,17 @@
     }
   }
 }
-@media (max-width: 690px) {
-  .nav-bar {
-    .navbar-bg {
-      background-size: auto 90vh;
-      background-repeat: no-repeat;
-      background-position: top center;
-      height: 90vh;
-      h1 {
-        bottom: 5%;
-        left: 40%;
-      }
+@media (max-width: 800px) {
+  .nav-bar-home {
+    background-size: auto 100vh;
+    h1 {
+      bottom: 5%;
+      left: 40%;
     }
   }
 }
 @media (max-width: 500px) {
-  .nav-bar {
+  .nav-bar-main {
     .navbar-content {
       justify-content: center !important;
       .menu {

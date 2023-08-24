@@ -29,7 +29,7 @@ body {
 .container-cards-home {
   width: 85%;
   margin: auto;
-  margin-top: 97vh;
+  margin-top: 0vh;
   h2 {
     font-size: 34px;
     text-align: center;
@@ -153,12 +153,7 @@ body {
 .container-contact-home a:hover {
   transform: scale(1.1);
 }
-@media (max-width: 991px) {
-  .adjust-about-cards {
-    margin-top: 71.1vh;
-    transition: margin-top 0.5s;
-  }
-}
+
 @media (max-width: 768px) {
   .container-contact-home a {
     align-self: flex-end;
@@ -166,9 +161,6 @@ body {
 }
 
 @media (max-width: 690px) {
-  .container-cards-home {
-    margin-top: 87vh;
-  }
   .container-jobs-home {
     .container-jobs-home-btns {
       max-width: 100%;
@@ -176,16 +168,5 @@ body {
         padding: 10px 15px;
       }
     }
-  }
-  .adjust-about-cards {
-    margin-top: 61.5vh;
-  }
-}
-@media (max-width: 500px) {
-  .container-cards-home {
-    margin-top: 79.5vh;
-  }
-  .adjust-about-cards {
-    margin-top: 58vh;
   }
 }

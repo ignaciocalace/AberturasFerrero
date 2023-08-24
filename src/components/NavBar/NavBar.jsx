@@ -1,33 +1,17 @@
 import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink, useLocation } from "react-router-dom";
 
-function NavBar({ onShowChange }) {
+function NavBar() {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
-  const [isShow, setIsShow] = useState(false);
-
-  useEffect(() => {
-    onShowChange(isShow);
-  }, [isShow, onShowChange]);
-
-  const handleClick = () => {
-    setIsShow(!isShow);
-  };
-
   return (
     <Navbar
-      className={`nav-bar ${isHomePage ? "nav-bar-home" : ""}`}
+      className={`nav-bar-main ${isHomePage ? "nav-bar-home" : ""}`}
       expand="lg"
     >
-      {isHomePage && (
-        <div className="navbar-bg">
-          <h1>Carpinteria de aluminio y herreria</h1>
-        </div>
-      )}
+      {isHomePage && <h1>Carpinteria de aluminio y herreria</h1>}
       <Container className="navbar-content">
         <NavLink to="/">
           <Navbar.Brand className="brand-name">
@@ -36,7 +20,7 @@ function NavBar({ onShowChange }) {
             </h2>
           </Navbar.Brand>
         </NavLink>
-        <Navbar.Toggle aria-controls="navbar-nav" onClick={handleClick} />{" "}
+        <Navbar.Toggle aria-controls="navbar-nav" />{" "}
         <Navbar.Collapse id="navbar-nav">
           <Nav className="menu">
             <NavLink to="/trabajos" className="nav-link">

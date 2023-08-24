@@ -22,4 +22,45 @@
       flex-direction: column;
     }
   }
+  .select-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 3.5vh auto;
+    p {
+      margin: 0;
+    }
+    .select-list {
+      appearance: none;
+      background: linear-gradient(45deg, #83b82e, #5f9e1e, #3a6b0f);
+      color: white;
+      margin-left: 1vw;
+      padding: 5px 7px;
+      text-decoration: none;
+      border-radius: 2px;
+      border-style: none;
+      font-weight: bold;
+      text-align: center;
+      animation: gradientTransition 5s ease infinite;
+      transform: scale(1);
+      transition: transform 0.2s ease;
+    }
+  }
+
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    margin: 3.5vh auto;
+    .pagination-btn,
+    .pagination-btn:disabled {
+      background: none;
+      border-style: none;
+    }
+    .pagination-btn {
+      opacity: 1;
+    }
+    .pagination-btn:disabled {
+      opacity: 0.3;
+    }
+  }
 }

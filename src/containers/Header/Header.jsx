@@ -11,7 +11,7 @@ const Header = (props) => {
 
   return (
     <header>
-      <NavBar onShowChange={props.onShowChange} />
+      <NavBar />
     </header>
   );
 };

@@ -26,15 +26,30 @@ function HomeImgCarr() {
 
   return (
     <div className="container-jobs-homeimgcarr">
-      <div className="container-jobs-presentation">
+      <div
+        className="container-jobs-presentation"
+        data-aos="fade-right"
+        data-aos-duration="600"
+        data-aos-offset="150"
+      >
         <SwiperH imagePaths={imagePathsVentanas} />
         <h3>Ventanas</h3>
       </div>
-      <div className="container-jobs-presentation">
+      <div
+        className="container-jobs-presentation"
+        data-aos="fade-right"
+        data-aos-duration="600"
+        data-aos-offset="150"
+      >
         <SwiperH imagePaths={imagePathsCerramientos} />
         <h3>Cerramientos</h3>
       </div>
-      <div className="container-jobs-presentation">
+      <div
+        className="container-jobs-presentation"
+        data-aos="fade-right"
+        data-aos-duration="600"
+        data-aos-offset="150"
+      >
         <SwiperH imagePaths={imagePathsHerreria} />
         <h3>Herrería</h3>
       </div>

@@ -1,5 +1,8 @@
 import "./index.scss";
-import React, { useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./containers/Header/Header.jsx";
 import Home from "./containers/pages/Home/Home.jsx";
@@ -12,18 +15,16 @@ import JobDetail from "./containers/pages/JobDetail/JobDetail.jsx";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
 function App() {
-  const [show, setShow] = useState(false);
-
-  const handleShowChange = (show) => {
-    setShow(show);
-  };
+  useEffect(() => {
+    AOS.init({});
+  }, []);
 
   return (
     <>
       <BrowserRouter>
-        <Header onShowChange={handleShowChange} />
+        <Header />
         <Routes>
-          <Route path="/" element={<Home show={show} />} />
+          <Route path="/" element={<Home />} />
           <Route path="/trabajos" element={<Jobs />} />
           <Route path="/trabajos/:jobId" element={<JobDetail />} />
           <Route path="/servicios" element={<Services />} />

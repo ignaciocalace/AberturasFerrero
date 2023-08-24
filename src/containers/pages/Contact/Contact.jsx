@@ -38,7 +38,11 @@ function Contact() {
             btnMsg={"Chatear"}
           />
         </div>
-        <div className="info-contact-container">
+        <div
+          className="info-contact-container"
+          data-aos="fade-up"
+          data-aos-duration="600"
+        >
           <h4>
             Nuestro horario de atención es de
             <strong> Lunes a Viernes de 8hs a 17hs</strong>

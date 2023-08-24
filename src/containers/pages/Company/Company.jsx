@@ -9,12 +9,22 @@ const Company = () => {
       </Helmet>
       <div className="container-company">
         <h2>Sobre nosotros</h2>
-        <div className="card-def card-company">
+        <div
+          className="card-def card-company"
+          data-aos="fade-up"
+          data-aos-duration="600"
+        >
           <div className="content">
-            <div className="image-container">
-              <div className="zoom-effect"></div>
-            </div>
-            <div className="text-container">
+            <div
+              className="image-container"
+              data-aos="fade-up"
+              data-aos-duration="600"
+            ></div>
+            <div
+              className="text-container"
+              data-aos="fade-up"
+              data-aos-duration="600"
+            >
               <h3>Impulsados por la pasión, guiados por la excelencia</h3>
               <p>
                 Con casi tres décadas de experiencia en el sector, nuestra

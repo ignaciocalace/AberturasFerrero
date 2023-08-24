@@ -87,7 +87,11 @@ const JobDetail = () => {
         <meta property="og:url" content={window.location.href} /> */}
       </Helmet>
       <h2>{job.title}</h2>
-      <div className="container-swipers">
+      <div
+        className="container-swipers"
+        data-aos="fade-up"
+        data-aos-duration="600"
+      >
         <Swiper
           className="swiperJobs-img"
           style={{
@@ -131,7 +135,11 @@ const JobDetail = () => {
           {renderSwiperSlides()}
         </Swiper>
       </div>
-      <div className="container-card-text">
+      <div
+        className="container-card-text"
+        data-aos="fade-up"
+        data-aos-duration="600"
+      >
         <h3>{job.type}</h3>
         <p>{job.description}</p>
         <Link to={whatsappLink} target="_blank" rel="noopener noreferrer">

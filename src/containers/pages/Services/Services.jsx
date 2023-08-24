@@ -107,8 +107,22 @@ const Services = () => {
             info={infoHierro}
           />
         </div>
-        <div className="container-button">
-          <Link to={whatsappLink} target="_blank" rel="noopener noreferrer">
+        <div
+          className="container-button"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-offset="105"
+        >
+          <p className="container-button-text">
+            Si está buscando asesoramiento para su proyecto, no dudes en
+            contactarnos
+          </p>
+          <Link
+            className="container-button-link"
+            to={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Necesito más información{" "}
             <FontAwesomeIcon
               icon={faWhatsapp}

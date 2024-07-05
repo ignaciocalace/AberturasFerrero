@@ -22,22 +22,29 @@
     align-items: center;
     font-size: 24px;
     color: #fff;
-
+    width: 100%;
     img {
       width: 50px;
       height: 50px;
       margin-right: 10px;
+      @media (max-width: 576px) {
+        width: 8vw;
+        height: 8vw;
+      }
     }
     h2 {
       margin: auto 0;
       color: white;
       white-space: normal;
-
       &:hover {
         color: white;
       }
       @media (max-width: 768px) {
         font-size: 34px;
+        text-align: center;
+      }
+      @media (max-width: 576px) {
+        font-size: 8vw;
       }
     }
   }

@@ -1,12 +1,8 @@
 .container-services {
-  padding: 2em;
+  width: 95%;
+  margin: auto;
   max-width: 1300px;
-  margin: 0 auto;
-  h2 {
-    font-size: 34px;
-    text-align: center;
-    margin-bottom: 1em;
-  }
+
   p {
     max-width: 87%;
     margin: 0 auto 1.2em;
@@ -16,6 +12,7 @@
   .accordion {
     margin: 0 -2.5%;
     box-shadow: 7px 8px 27px -6px rgba(0, 0, 0, 0.44);
+    gap: 0;
     .accordion-header {
       margin-bottom: 0;
       .accordion-button {
@@ -93,5 +90,11 @@
       transform: scale(1);
       transition: transform 0.2s ease;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .container-services {
+    width: 85%;
   }
 }

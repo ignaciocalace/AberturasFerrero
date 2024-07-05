@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
 
-function CardContact({ image, title, description, link, className, btnMsg }) {
+function CardContact({
+  image,
+  title,
+  description,
+  description1,
+  link,
+  link1,
+  className,
+}) {
   return (
     <div
       className={`card-def card-contact ${className}`}
@@ -9,8 +17,8 @@ function CardContact({ image, title, description, link, className, btnMsg }) {
     >
       <img src={image} alt={title} loading="lazy" />
       <h3>{title}</h3>
-      {description && <p>{description}</p>}
-      <Link to={`${link}`}>{btnMsg}</Link>
+      <Link to={`${link}`}>{description}</Link>
+      <Link to={`${link1}`}>{description1}</Link>
     </div>
   );
 }

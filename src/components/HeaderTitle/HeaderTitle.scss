@@ -1,0 +1,25 @@
+.header-with-image {
+  background-image: url("/../public/img/imgFixed/contacto.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  h2 {
+    color: white;
+    font-size: 34px;
+    text-align: center;
+  }
+}
+@media (max-width: 695px) {
+  .header-with-image {
+    background-image: none;
+    height: auto;
+    margin: 1.5rem 0;
+    h2 {
+      color: black;
+    }
+  }
+}

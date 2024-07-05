@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import HeaderTitle from "../../../components/HeaderTitle/HeaderTitle.jsx";
 
 const Company = () => {
   return (
@@ -8,7 +9,7 @@ const Company = () => {
         <title>Nosotros | Aberturas Ferrero</title>
       </Helmet>
       <div className="container-company">
-        <h2>Sobre nosotros</h2>
+        <HeaderTitle text={"Nosotros"} />
         <div
           className="card-def card-company"
           data-aos="fade-up"

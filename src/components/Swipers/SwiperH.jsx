@@ -23,7 +23,6 @@ export default function SwiperH({ imagePaths }) {
           disableOnInteraction: false,
         }}
         allowTouchMove={false}
-        lazy={true}
         modules={[Autoplay]}
       >
         {imagePaths.map((imagePath, index) => (

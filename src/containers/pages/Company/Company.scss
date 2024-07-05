@@ -1,16 +1,12 @@
 .container-company {
   width: 95%;
-  max-width: 1200px;
-  min-height: 70vh;
-  margin: 3vh auto;
-  h2 {
-    font-size: 34px;
-    text-align: center;
-    margin: 20px 0;
+  margin: auto;
+  max-width: 1300px;
+  .card-company {
+    margin: 0 1rem;
   }
   .content {
     display: flex;
-
     .text-container {
       flex: 1;
       margin-left: 3rem;

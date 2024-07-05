@@ -15,12 +15,17 @@ function NavBar() {
       <Container className="navbar-content">
         <NavLink to="/">
           <Navbar.Brand className="brand-name">
+            <img
+              src="/img/imgFixed/LogoNuevoAFsoloWhite.png"
+              alt="Aberturas Ferrero Logo"
+              className="logo"
+            />
             <h2>
               Aberturas <span>Ferrero</span>
             </h2>
           </Navbar.Brand>
         </NavLink>
-        <Navbar.Toggle aria-controls="navbar-nav" />{" "}
+        <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="menu">
             <NavLink to="/trabajos" className="nav-link">

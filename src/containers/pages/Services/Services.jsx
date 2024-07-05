@@ -4,6 +4,7 @@ import CardExpandable from "../../../components/CardExpandable/CardExpandable.js
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import HeaderTitle from "../../../components/HeaderTitle/HeaderTitle.jsx";
 
 const Services = () => {
   const infoAluminio = [
@@ -90,7 +91,7 @@ const Services = () => {
         <title>Servicios | Aberturas Ferrero</title>
       </Helmet>
       <div className="container-services">
-        <h2>Servicios</h2>
+        <HeaderTitle text={"Servicios"} />
         <div className="grid-services">
           <CardExpandable
             className="item-service"
@@ -103,7 +104,7 @@ const Services = () => {
             className="item-service"
             image={`./img/imgFixed/herreria.jpg`}
             title={`Herrería`}
-            text={`Si lo que busca es seguirdad, decoración o ambas, nuestros servicios de herrería son la mejor opción.`}
+            text={`Si lo que busca es seguridad, decoración o ambas, nuestros servicios de herrería son la mejor opción.`}
             info={infoHierro}
           />
         </div>
@@ -115,7 +116,7 @@ const Services = () => {
         >
           <p className="container-button-text">
             Si está buscando asesoramiento para su proyecto, no dudes en
-            contactarnos
+            contactarnos.
           </p>
           <Link
             className="container-button-link"
@@ -123,7 +124,7 @@ const Services = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Necesito más información{" "}
+            Me gustaría hacer otra consulta{" "}
             <FontAwesomeIcon
               icon={faWhatsapp}
               bounce

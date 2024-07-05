@@ -23,7 +23,16 @@ function NavFooter() {
           Contacto
         </NavLink>
       </nav>
-      <p className="text-muted">© {currentYear} Created by Ignacio Calace</p>
+      <p className="text-muted">
+        © {currentYear} Creado por{" "}
+        <a
+          href="https://www.ignaciocalace.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ignacio Calace
+        </a>
+      </p>
     </footer>
   );
 }

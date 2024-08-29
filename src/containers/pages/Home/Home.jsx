@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import CardAbout from "../../../components/CardAbout/CardAbout.jsx";
 import HomeImgCarr from "../../../components/HomeImgCarr/HomeImgCarr.jsx";
 import { Helmet } from "react-helmet";
+import GoogleReviews from "../../../components/GoogleReviews/GoogleReviews.jsx";
 
 function Home() {
   return (
@@ -38,7 +39,6 @@ function Home() {
           <Link to="/servicios">Ver servicios</Link>
         </div>
       </div>
-
       <div className="container-contact-home">
         <h2>Tus proyectos se pueden hacer realidad</h2>
         <h2>
@@ -46,6 +46,9 @@ function Home() {
           <span>WhatsApp</span> o <span>teléfono</span>
         </h2>
         <Link to="/contacto">Más información</Link>
+      </div>
+      <div className="container-google-reviews">
+        <GoogleReviews />
       </div>
     </>
   );

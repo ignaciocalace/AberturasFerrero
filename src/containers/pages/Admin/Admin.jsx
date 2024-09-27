@@ -334,7 +334,10 @@ const Admin = () => {
 
   return (
     <div className="container-admin">
-      <HeaderTitle text="Administración" />
+      <HeaderTitle
+        text="Administración"
+        backgroundImage="/img/imgFixed/admin.jpg"
+      />
       <div className="logout-button-container">
         <button
           className="button-standard button-logout"

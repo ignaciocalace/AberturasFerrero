@@ -34,80 +34,74 @@ function Contact() {
       <Helmet>
         <title>Nosotros | Aberturas Ferrero</title>
       </Helmet>
-      <div className="container-contact">
+      <div className="contact-container">
         <HeaderTitle text={"Contacto"} />
-        <div className="card-contact-container">
-          <CardContact
-            className="card-phone"
-            image={"/img/imgFixed/phone.png"}
-            title={"Teléfono"}
-            description={"094 285 654"}
-            description1={"094 322 635"}
-            link={"tel:+59894285654"}
-            link1={"tel:+59894322635"}
-            btnMsg={"Llamar"}
-          />
-          <CardContact
-            className={"card-email"}
-            image={"/img/imgFixed/email.png"}
-            title={"Email"}
-            description={"aberturas@hotmail.com"}
-            description1={"aberturasferrerotaller@gmail.com"}
-            link={"mailto:aberturas@hotmail.com"}
-            link1={"mailto:aberturasferrerotaller@gmail.com"}
-            btnMsg={"Enviar correo"}
-          />
-          <CardContact
-            className="card-whatsapp"
-            image={"/img/imgFixed/whatsapp.png"}
-            title={"Whatsapp"}
-            description={"+598 94 285 654"}
-            description1={"+598 94 322 635"}
-            link={"https://wa.me/+59894285654?"}
-            link1={"https://wa.me/+5989322635?"}
-            btnMsg={"Chatear"}
-          />
-        </div>
 
-        <div
-          className="info-contact-container"
-          data-aos="fade-up"
-          data-aos-duration="600"
-        >
-          <h4>Redes sociales</h4>
-        </div>
-        <div
-          className="social-container"
-          data-aos="fade-up"
-          data-aos-duration="600"
-        >
-          <SocialIcon platform="facebook" />
-          <SocialIcon platform="instagram" />
-        </div>
+        <div className="contact-info-container">
+          <div className="card-contact-container">
+            <CardContact
+              className="card-whatsapp"
+              image={"/img/imgFixed/whatsapp.png"}
+              title={"Whatsapp"}
+              description={"+598 94 285 654"}
+              description1={"+598 94 322 635"}
+              link={"https://wa.me/+59894285654?"}
+              link1={"https://wa.me/+5989322635?"}
+            />
+            <CardContact
+              className="card-phone"
+              image={"/img/imgFixed/phone.png"}
+              title={"Teléfono"}
+              description={"094 285 654"}
+              description1={"094 322 635"}
+              link={"tel:+59894285654"}
+              link1={"tel:+59894322635"}
+            />
+            <CardContact
+              className={"card-email"}
+              image={"/img/imgFixed/email.png"}
+              title={"Email"}
+              description={"aberturas@hotmail.com"}
+              description1={"aberturasferrerotaller@gmail.com"}
+              link={"mailto:aberturas@hotmail.com"}
+              link1={"mailto:aberturasferrerotaller@gmail.com"}
+            />
+            <div
+              className="social-container"
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-offset="-150"
+            >
+              <SocialIcon platform="facebook" />
+              <SocialIcon platform="instagram" />
+            </div>
+          </div>
 
+          <div
+            className="map-container"
+            data-aos="fade-up"
+            data-aos-duration="600"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13102.496344887566!2d-55.9373871!3d-34.8153982!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4f073dcb42adf4c5%3A0xa2bb45c8c58ed5bb!2sAberturas%20Ferrero!5e0!3m2!1ses-419!2suy!4v1718981545779!5m2!1ses-419!2suy"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Aberturas Ferrero Location"
+            ></iframe>
+            <p>Lomas de Solymar, Canelones, Uruguay.</p>
+          </div>
+        </div>
         <div
-          className="info-contact-container"
+          className="info-social-container"
           data-aos="fade-up"
           data-aos-duration="600"
+          data-aos-offset="-150"
         >
           <h4>
             Nuestro horario de atención es de
             <strong> Lunes a Viernes de 8hs a 17hs</strong>
           </h4>
-          <p>Lomas de Solymar, Canelones, Uruguay.</p>
-        </div>
-        <div
-          className="map-container"
-          data-aos="fade-up"
-          data-aos-duration="600"
-        >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13102.496344887566!2d-55.9373871!3d-34.8153982!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4f073dcb42adf4c5%3A0xa2bb45c8c58ed5bb!2sAberturas%20Ferrero!5e0!3m2!1ses-419!2suy!4v1718981545779!5m2!1ses-419!2suy"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Aberturas Ferrero Location"
-          ></iframe>
         </div>
       </div>
     </>

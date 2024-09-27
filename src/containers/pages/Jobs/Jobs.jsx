@@ -113,7 +113,10 @@ const Jobs = () => {
         <title>Trabajos | Aberturas Ferrero</title>
       </Helmet>
       <div className="container-jobs">
-        <HeaderTitle text="Nuestros trabajos" />
+        <HeaderTitle
+          text="Nuestros trabajos"
+          backgroundImage="/img/imgFixed/jobsHome/cerramientos/cerramientos12.jpg"
+        />
         <div className="select-container">
           <p>Mostrar: </p>
           <select

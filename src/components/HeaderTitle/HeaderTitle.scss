@@ -1,5 +1,5 @@
 .header-with-image {
-  background-image: url("/../public/img/imgFixed/contacto.jpg");
+  position: relative;
   background-size: cover;
   background-position: center;
   height: 180px;
@@ -7,17 +7,35 @@
   align-items: center;
   justify-content: center;
   margin: 2rem 0;
+  overflow: hidden;
+
   h2 {
     color: white;
     font-size: 34px;
     text-align: center;
+    z-index: 1;
   }
-}
-@media (max-width: 695px) {
-  .header-with-image {
-    background-image: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    filter: blur(1.5px) brightness(0.7);
+    z-index: 0;
+  }
+
+  @media (max-width: 695px) {
     height: auto;
     margin: 1.5rem 0;
+    &::before {
+      filter: none;
+    }
     h2 {
       color: black;
     }

@@ -17,4 +17,137 @@
     min-height: 58px;
     line-height: 1.2;
   }
+
+  .card-job-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 15px;
+    position: relative;
+    a {
+      display: inline-block;
+      background: linear-gradient(45deg, #e69500, #cc7a00, #a65c00);
+      background-size: 150% 150%;
+      min-width: 84%;
+      color: white;
+      margin: 15px 0;
+      padding: 6px;
+      text-decoration: none;
+      border-radius: 25px;
+      align-self: center;
+      text-align: center;
+      animation: gradientTransition 5s ease infinite;
+      transform: scale(1);
+      transition: transform 0.2s ease;
+      &:hover {
+        background: linear-gradient(45deg, #d18800, #b96d00, #8f5100);
+        transform: scale(1.03);
+        .rocket {
+          animation: shake 0.5s infinite ease-in-out;
+        }
+      }
+      &:active {
+        transform: scale(0.95);
+        .rocket {
+          animation: takeOff 1s ease forwards;
+        }
+      }
+    }
+    .rocket {
+      color: white;
+      margin-left: 8px;
+      transform: rotate(45deg);
+      transition: transform 0.4s ease;
+    }
+  }
+
+  .btn-share {
+    background: linear-gradient(45deg, #83b82e, #5f9e1e, #3a6b0f);
+    color: white;
+    border: none;
+    min-height: 40px;
+    min-width: 40px;
+    max-height: 40px;
+    max-width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    &:hover {
+      background: linear-gradient(45deg, #76a429, #538718, #325908);
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  .copy-popup {
+    position: absolute;
+    top: -25px;
+    right: -28px;
+    background: linear-gradient(45deg, #218838, #1e7e34);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(45deg) translateX(0);
+  }
+  20% {
+    transform: rotate(45deg) translateY(-0.5px);
+  }
+  40% {
+    transform: rotate(45deg) translateX(0.5px);
+  }
+  60% {
+    transform: rotate(45deg) translateX(-0.5px);
+  }
+  80% {
+    transform: rotate(45deg) translateX(0.5px);
+  }
+  100% {
+    transform: rotate(45deg) translateX(0);
+  }
+}
+
+@keyframes takeOff {
+  0% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  /*  50% {
+    transform: rotate(45deg) translate(35px, -35px) scale(1.2);
+  } */
+  100% {
+    transform: rotate(45deg) translate(35px, -35px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes gradientTransition {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

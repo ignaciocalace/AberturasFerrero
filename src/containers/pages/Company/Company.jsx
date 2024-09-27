@@ -9,7 +9,10 @@ const Company = () => {
         <title>Nosotros | Aberturas Ferrero</title>
       </Helmet>
       <div className="container-company">
-        <HeaderTitle text={"Nosotros"} />
+        <HeaderTitle
+          text={"Nosotros"}
+          backgroundImage="/img/imgFixed/jobsHome/ventanas/ventana3.jpg"
+        />
         <div
           className="card-def card-company"
           data-aos="fade-up"

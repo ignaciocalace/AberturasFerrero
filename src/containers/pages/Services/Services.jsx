@@ -91,20 +91,23 @@ const Services = () => {
         <title>Servicios | Aberturas Ferrero</title>
       </Helmet>
       <div className="container-services">
-        <HeaderTitle text={"Servicios"} />
+        <HeaderTitle
+          text={"Servicios"}
+          backgroundImage="/img/imgFixed/jobsHome/ventanas/ventana2.jpg"
+        />
         <div className="grid-services">
           <CardExpandable
             className="item-service"
             image={`./img/imgFixed/aluminio.jpg`}
             title={`Carpinteria de Aluminio`}
-            text={`Trabajamos con 2 de las empresas más reconocidas en el Uruguay, Abasur S.A. y Aluminios del Uruguay S.A.`}
+            text={`Trabajamos con dos de las empresas más destacadas en Uruguay: Abasur S.A. y Aluminios del Uruguay S.A., garantizando calidad y confianza en cada proyecto.`}
             info={infoAluminio}
           />
           <CardExpandable
             className="item-service"
             image={`./img/imgFixed/herreria.jpg`}
             title={`Herrería`}
-            text={`Si lo que busca es seguridad, decoración o ambas, nuestros servicios de herrería son la mejor opción.`}
+            text={`Si lo que busca es seguridad, decoración o ambas, nuestros servicios de herrería son la mejor opción. Ofrecemos trabajos personalizados de primera calidad.`}
             info={infoHierro}
           />
         </div>

@@ -1,0 +1,45 @@
+.btn-share {
+  color: white;
+  border: none;
+  margin: 0;
+  padding: 0;
+  min-height: 40px;
+  min-width: 40px;
+  max-height: 40px;
+  max-width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.copy-popup {
+  position: absolute;
+  top: -25px;
+  right: -28px;
+  background: linear-gradient(45deg, #218838, #1e7e34);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+.btn-neutral {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  border: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}

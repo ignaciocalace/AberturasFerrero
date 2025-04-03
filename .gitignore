@@ -1,7 +1,5 @@
 /src/config/configFirestore.js
 
-
-
 # dependencies
 /node_modules
 /.pnp
@@ -15,6 +13,9 @@
 
 # misc
 .DS_Store
+
+# Environment variables (ignore all env files)
+.env
 .env.local
 .env.development.local
 .env.test.local

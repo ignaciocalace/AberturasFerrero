@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet";
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { db } from "../../../config/configFirestore.js";
 import { doc, getDoc } from "firebase/firestore/lite";
+import { db } from "../../../config/configFirestore.js";
+import { faCopy } from "@fortawesome/free-solid-svg-icons";
 import Loading from "../../../components/Loading/Loading.jsx";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
@@ -21,6 +22,7 @@ const JobDetail = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [copied, setCopied] = useState(false);
   const location = useLocation();
   const whatsappMessage = `Buenas! Quiero algo similar a esto: https://aberturasferrero.com${location.pathname}`;
   const whatsappLink = `https://wa.me/+59894285654?text=${encodeURIComponent(
@@ -63,7 +65,11 @@ const JobDetail = () => {
       </SwiperSlide>
     ));
   };
-
+  const handleCopy = () => {
+    navigator.clipboard.writeText(`${window.location.origin}`);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1500);
+  };
   return (
     <div className="container-job-detail">
       <Helmet>
@@ -132,14 +138,20 @@ const JobDetail = () => {
       >
         <h3>{job.type}</h3>
         <p>{job.description}</p>
-        <Link to={whatsappLink} target="_blank" rel="noopener noreferrer">
-          Quiero algo similar{" "}
-          <FontAwesomeIcon
-            icon={faWhatsapp}
-            bounce
-            transform="grow-5 right-5"
-          />
-        </Link>
+        <div className="detail-job-btns">
+          <Link to={whatsappLink} target="_blank" rel="noopener noreferrer">
+            Quiero algo similar
+            <FontAwesomeIcon
+              icon={faWhatsapp}
+              bounce
+              transform="grow-5 right-5"
+            />
+          </Link>
+          <button className="btn-share" onClick={handleCopy}>
+            <FontAwesomeIcon icon={faCopy} />
+          </button>
+          {copied && <div className="copy-popup">¡Enlace copiado!</div>}
+        </div>
       </div>
     </div>
   );

@@ -24,12 +24,13 @@ function NavFooter() {
         </NavLink>
       </nav>
       <p className="text-muted">
-        © {currentYear} Creado por{" "}
+        © {currentYear} Creado por
         <a
           href="https://www.ignaciocalace.com"
           target="_blank"
           rel="noopener noreferrer"
         >
+          {" "}
           Ignacio Calace
         </a>
       </p>

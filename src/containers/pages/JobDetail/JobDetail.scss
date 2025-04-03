@@ -67,6 +67,20 @@
       background: linear-gradient(45deg, #e69500, #cc7a00, #a65c00);
     }
   }
+  .detail-job-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 15px;
+    position: relative;
+    .btn-share {
+      background: linear-gradient(45deg, #e69500, #cc7a00, #a65c00);
+      &:hover {
+        background: linear-gradient(45deg, #d18800, #b96d00, #8f5100);
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {

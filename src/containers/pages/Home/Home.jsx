@@ -4,6 +4,7 @@ import CardAbout from "../../../components/CardAbout/CardAbout.jsx";
 import HomeImgCarr from "../../../components/HomeImgCarr/HomeImgCarr.jsx";
 import { Helmet } from "react-helmet";
 import GoogleReviews from "../../../components/GoogleReviews/GoogleReviews.jsx";
+import NoticeBanner from "../../../components/NoticeBanner/NoticeBanner.jsx";
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <Helmet>
         <title>Aberturas Ferrero</title>
       </Helmet>
+      <NoticeBanner startDate={"2024-12-24"} endDate={"2025-1-13"} />
       <div className="container-cards-home">
         <h2>Más sobre nosotros</h2>
         <div className="card-about-container">
@@ -42,7 +44,7 @@ function Home() {
       <div className="container-contact-home">
         <h2>Tus proyectos se pueden hacer realidad</h2>
         <h2>
-          Contacta con nosotros por <span>correo electrónico</span>,{" "}
+          Contacta con nosotros por <span>correo electrónico</span>,
           <span>WhatsApp</span> o <span>teléfono</span>
         </h2>
         <Link to="/contacto">Más información</Link>

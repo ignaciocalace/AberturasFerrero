@@ -1,0 +1,68 @@
+@import "src/styles/mixins"; // Asegúrate de importar los mixins si los tienes en otro archivo
+
+.employees-container {
+  max-width: 95%;
+  margin: auto;
+  padding: 20px;
+
+  h1,
+  h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .button-back {
+    @include button-standard;
+    background-color: #6c757d; // Gris
+    &:hover {
+      background-color: #5a6268;
+    }
+  }
+
+  .employee-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .button-add {
+      @include button-success;
+    }
+  }
+
+  .employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+
+    th,
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f4f4f4;
+    }
+
+    .table-actions {
+      display: flex;
+      gap: 10px;
+
+      .button-view {
+        @include button-standard;
+      }
+
+      .button-delete {
+        @include button-danger;
+      }
+    }
+  }
+}

@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowUpFromBracket,
-  faRocket,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCopy, faRocket } from "@fortawesome/free-solid-svg-icons";
 
 import { useState } from "react";
 
@@ -31,7 +28,7 @@ function CardJob({ image, title, type, link }) {
           <FontAwesomeIcon className="rocket" icon={faRocket} />
         </Link>
         <button className="btn-share" onClick={handleCopy}>
-          <FontAwesomeIcon icon={faArrowUpFromBracket} />
+          <FontAwesomeIcon icon={faCopy} />
         </button>
         {copied && <div className="copy-popup">¡Enlace copiado!</div>}
       </div>

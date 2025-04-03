@@ -127,7 +127,7 @@ const Services = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Me gustaría hacer otra consulta{" "}
+            Me gustaría hacer otra consulta
             <FontAwesomeIcon
               icon={faWhatsapp}
               bounce

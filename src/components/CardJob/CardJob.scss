@@ -44,14 +44,17 @@
         background: linear-gradient(45deg, #d18800, #b96d00, #8f5100);
         transform: scale(1.03);
         .rocket {
-          animation: shake 0.5s infinite ease-in-out;
+          animation: shakeAndTakeOff 1.5s ease forwards;
         }
       }
       &:active {
         transform: scale(0.95);
-        .rocket {
-          animation: takeOff 1s ease forwards;
-        }
+      }
+    }
+    .btn-share {
+      background: linear-gradient(45deg, #83b82e, #5f9e1e, #3a6b0f);
+      &:hover {
+        background: linear-gradient(45deg, #76a429, #538718, #325908);
       }
     }
     .rocket {
@@ -61,71 +64,30 @@
       transition: transform 0.4s ease;
     }
   }
-
-  .btn-share {
-    background: linear-gradient(45deg, #83b82e, #5f9e1e, #3a6b0f);
-    color: white;
-    border: none;
-    min-height: 40px;
-    min-width: 40px;
-    max-height: 40px;
-    max-width: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 18px;
-    transition: transform 0.3s ease, background 0.3s ease;
-    &:hover {
-      background: linear-gradient(45deg, #76a429, #538718, #325908);
-      transform: scale(1.1);
-    }
-
-    &:active {
-      transform: scale(0.95);
-    }
-  }
-
-  .copy-popup {
-    position: absolute;
-    top: -25px;
-    right: -28px;
-    background: linear-gradient(45deg, #218838, #1e7e34);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    opacity: 0;
-    animation: fadeIn 0.3s forwards;
-  }
 }
 
-@keyframes shake {
+@keyframes shakeAndTakeOff {
   0% {
     transform: rotate(45deg) translateX(0);
   }
   20% {
-    transform: rotate(45deg) translateY(-0.5px);
+    transform: rotate(45deg) translateY(-0.8px);
   }
   40% {
-    transform: rotate(45deg) translateX(0.5px);
+    transform: rotate(45deg) translateX(0.8px);
   }
   60% {
-    transform: rotate(45deg) translateX(-0.5px);
+    transform: rotate(45deg) translateY(-0.8px);
   }
   80% {
-    transform: rotate(45deg) translateX(0.5px);
+    transform: rotate(45deg) translateX(0.8px);
   }
-  100% {
-    transform: rotate(45deg) translateX(0);
-  }
-}
 
-@keyframes takeOff {
-  0% {
-    transform: rotate(45deg) translate(0, 0);
+  90% {
+    transform: rotate(45deg) translateY(-0.8px) scale(1);
+    opacity: 1;
   }
-  /*  50% {
-    transform: rotate(45deg) translate(35px, -35px) scale(1.2);
-  } */
+
   100% {
     transform: rotate(45deg) translate(35px, -35px) scale(1.5);
     opacity: 0;

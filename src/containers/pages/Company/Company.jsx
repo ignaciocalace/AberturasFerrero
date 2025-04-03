@@ -32,7 +32,7 @@ const Company = () => {
               <h3>Impulsados por la pasión, guiados por la excelencia</h3>
               <p>
                 Con casi tres décadas de experiencia en el sector, nuestra
-                empresa se dedica a ofrecer{" "}
+                empresa se dedica a ofrecer
                 <strong>servicios de la más alta calidad.</strong> Nos guían
                 nuestros principios fundamentales de honestidad, integridad y
                 excelencia. Nos esforzamos en poner siempre las necesidades de
@@ -45,10 +45,9 @@ const Company = () => {
                 nuestros clientes. Durante años, hemos construido una reputación
                 sólida fundamentada en la integridad y el compromiso.
                 <strong>
-                  {" "}
                   Nuestro objetivo es mantenernos como un socio confiable para
                   nuestros clientes,
-                </strong>{" "}
+                </strong>
                 brindando soluciones personalizadas que satisfacen sus
                 necesidades y les ayudan a alcanzar sus objetivos.
               </p>

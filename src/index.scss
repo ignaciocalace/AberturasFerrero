@@ -1,4 +1,6 @@
+@import "src/styles/mixins.scss";
 @import "src/styles/card/card.scss";
+@import "src/styles/card/buttons.scss";
 @import "src/components/NavBar/NavBar.scss";
 @import "src/containers/pages/Home/Home.scss";
 @import "src/components/CardJob/CardJob.scss";
@@ -17,4 +19,8 @@
 @import "src/containers/pages/Services/Services.scss";
 @import "src/components/HomeImgCarr/HomeImgCarr.scss";
 @import "src/components/CardContact/CardContact.scss";
+@import "src/components/NoticeBanner/NoticeBanner.scss";
 @import "src/containers/pages/JobDetail/JobDetail.scss";
+@import "src/containers/pages/Measurement/Measurement.scss";
+@import "src/containers/pages/Admin/Employees/Employees.scss";
+@import "src/containers/pages/Admin/Employees/EmployeesDetails/EmployeesDetails.scss";
